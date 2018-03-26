@@ -4,9 +4,8 @@ public class CS318Project
 {
 	public static void main(String[] args) throws IOException
 	{
-		//Program is mimics the basic counters included within word editors.
-
-		File file = new File("C:\\Users\\Brian\\Desktop\\testDoc.txt"); //change according to file location
+		//Program mimic counters found within word editors such as the word counter, sentence per paragraph and similar stats
+		File file = new File("C:\\Users\\Owner\\Documents\\testfile.txt"); //Edit this based on the system and location of file
 		FileInputStream fileStream = new FileInputStream(file);
 		InputStreamReader input = new InputStreamReader(fileStream);
 		BufferedReader reader = new BufferedReader(input);
@@ -18,6 +17,7 @@ public class CS318Project
 		int characterWO = 0;
 		int characterCount = 0;
 		int paragraphCount = 1;
+                int wordExclusion = 0;
 		
 		while((line = reader.readLine()) != null)
 		{
@@ -34,6 +34,15 @@ public class CS318Project
 				String[] wordList = line.split("\\s+");
 				
 				countWord += wordList.length;
+                                for(int x=0; x<wordList.length; x++){
+                                    String check = wordList[x].replaceAll("[^a-zA-Z\\s]", "");
+                                    //replaces non alphabet characters with ''
+			check = check.toLowerCase();
+                                    if(check.equals("a") || check.equals("an") || check.equals("the"))
+                                        wordExclusion += 1;
+
+                                    System.out.println(wordList[x]);
+                                }
 				
 				// [!?.:]+ sentence delimiter
 				String[] sentenceList = line.split("[!?.:]+");
@@ -52,13 +61,13 @@ public class CS318Project
 		}
 		
 		System.out.println("Total word count: " + countWord);
-		//System.out.println("Total word count without article(a,an,the) :");
+		System.out.println("Total word count without article(a,an,the) :" + (countWord - wordExclusion));
 		System.out.println("Total number of sentences: " + sentenceCount);
 		System.out.println("Total number of characters: " + characterCount);
 		System.out.println("Total number of characters without spaces and punctuation: " + characterWO);
 		System.out.println("Number of paragraphs: " + paragraphCount);
-		//System.out.println("Average number of letter per a word: " + );
-		System.out.println("Average number of words per a sentenece: " + (countWord/sentenceCount));
-		System.out.println("Average number of sentences per a paragraph: " + (sentenceCount/paragraphCount));
+		System.out.println("Average number of words per sentence: " + (countWord/sentenceCount));
+		System.out.println("Average number of sentences per paragraph: " + (sentenceCount/paragraphCount));
+                System.out.println("Average number of characters per word: " + (characterWO/countWord));
 	}
 }
