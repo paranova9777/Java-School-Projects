@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+    
+    div.positioning1 {
+    width: 100px;
+    height: 100px;
+    background:#66ffff;
+    position: fixed;
+    left:0px;
+    bottom:0px;
+}
+    
+    div.positioning2 {
+    width: 100px;
+    height: 100px;
+    background:#ff0000;
+    position: absolute;
+    top: 50px;
+    right: 50px;
+}
+    div.positioning3 {
+    width: 100px;
+    height: 100px;
+    background:#f4d742;
+    position: absolute;
+    top: 100px;
+    right: 100px;
+    }
+    
+    div.responsive {
+        width: 150px;
+        height: 150px;
+        background:#45f442;
+        border: 5px solid red;
+        
+    }
+    
+@media screen and (max-width: 1024px) and (min-width: 768px) {
+    div.responsive{
+        background: #f45042;
+    }
+}
+    
+    
+</style>
+<title>Experiment page</title>
+</head>
+
+<body>
+    <div class="positioning1">
+        
+    </div>
+    
+    
+    <div class="positioning2">
+    
+    </div>
+    
+    <div class="positioning3">
+    
+    </div>
+    Z-index CSS property is used to determine the stack order of whichever element. So a element with lower stack order will go under any element that has higher stack order.
+    
+    <br>
+    
+    <div class="responsive">
+       I am a responsive block. 
+    </div>
+    <br>
+    <br>
+    <br>
+    
+     First year that these browsers had flex box support was in 2013.
+    Column-count support didn't come for Chrome,IE,Safari and Opera till 2016.
+    <!---First year that these browsers had flex box support was in 2013.
+    Column-count support didn't come for Chrome,IE,Safari and Opera till 2016.-->
+    
+</body>
+
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>HTML Form-Cake Order Form</title>
+  <meta charset="UTF-8">
+</head>
+   <form name="form1" action="echo.php" method="GET">
+       Name:<br>
+       <input type="text" name="name"><br><br>
+       
+       Email:<br>
+       <input type="text" name="Email"><br><br>
+       
+       Number of Orders:<br>
+       <input type="number" name="Order Number"><br><br>
+       
+       How fluffy do you want your cake?:<br>
+       <input type="range" name="fluff" min="0" max="10"><br><br>
+       
+       Comments:<br>
+       <textarea name="comments" rows="5" cols="20">Extra comments to the baker.
+       </textarea><br><br>
+       
+       Extras:<br>
+       <input type="checkbox" name="icing" value="icing"> Icing  
+       <br>
+       <input type="checkbox" name="sprinkles" value="sprinkles"> Sprinkles 
+       <br>
+       <input type="checkbox" name="strawberries" value="strawberries"> Strawberries
+       <br>
+       <input type="hidden" name="extraHidden" value="extra">
+       <br>
+       
+       One inculded side order:<br>
+       <input type="radio" name="extra" value="cupcake" checked> Cupcakes<br>
+       <input type="radio" name="extra" value="coffeeCake"> Coffee Cake<br>
+       <input type="radio" name="extra" value="GrandmaSpecial"> Grandma's Special<br><br>
+       
+       Pick another out of the three:<br>
+       <input type="radio" name="shipping" value="OneDay" checked> One Day Shipping<br>
+       <input type="radio" name="shipping" value="TwoDay"> Two Day Shipping<br>
+       <input type="radio" name="shipping" value="SameDay"> Same Day Shipping<br><br>
+       
+       What's your favorite flavor?
+       <br>
+       <select multiple name="flavor">
+           <option value="">Select one flavor</option>
+           <option value="vanilla">Vanilla</option>
+           <option value="chocolate">Chocolate</option>
+           <option value="strawberry">Strawberry</option>
+       </select><br><br>
+       
+        Select a Size.
+       <br>
+       <select name="size">
+           <option value="">Select multiple</option>
+           <option value="small">Small</option>
+           <option value="medium">Medium</option>
+           <option value="large">Large</option>
+       </select><br><br>
+       
+       <input type="submit" value=" Submit ">
+       <input type="reset" value="Reset">
+       
+       
+    </form> 
+    
+<body>
+
+</body>
+</html>

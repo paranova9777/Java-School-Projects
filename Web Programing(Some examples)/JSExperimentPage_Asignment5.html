@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    </head>
+    <title>JavaScript Test Page</title>
+    <style>
+        
+        #change {
+            width: 150px;
+            height: 150px;
+            background:#45f442;
+            border: 5px solid red;
+
+        }
+        
+        div.positioning2 {
+            width: 100px;
+            height: 100px;
+            background:#ff0000;
+            position: absolute;
+            top: 50px;
+            right: 50px;
+        }
+        
+        div.positioning3 {
+            width: 100px;
+            height: 100px;
+            background:#ff0000;
+            position: absolute;
+            bottom: 175px;
+            right: 100px;
+        }
+        
+        #changeColor {
+            width: 100px;
+            height: 100px;
+            background:#f4e842;
+        }
+        
+        #mouseEffect {
+            width: 100px;
+            height: 100px;
+            background: #f4b042;
+        }
+        
+        
+    </style>
+    <script>
+        
+        var myWindow;
+
+        function openWin() {
+            var hei = screen.availHeight;
+            var wid = screen.availWidth;
+            myWindow = window.open("", "", "width=100,height=100");
+            myWindow.resizeTo(wid,hei);
+            
+        }
+        
+          window.onload = function() {
+          var innerChange = document.getElementById("change");
+
+          innerChange.onclick = function() {
+              
+              innerChange.innerHTML="You see what I did there?"
+          };
+        };
+    
+        
+        function changePosition() {
+            document.getElementById("position").className="positioning3";
+        }
+        
+        function changeColor() {
+            document.getElementById("changeColor").style.background="#df42f4";
+        }
+        
+        function hide() {
+            document.getElementById("mouseEffect").style.visibility="hidden";
+        }
+        
+        function show() {
+            document.getElementById("mouseEffect").style.visibility="visible";
+        }
+    
+    
+    
+    </script>
+<body>
+
+<h2>JavaScript Test Page</h2>
+     <button onclick="openWin()">Create window</button>
+     This link will create a new window based on the size of user's screen.
+    
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+<div id="change"> Hi, will change my innerHTMl if I am clicked</div>
+    
+<div id="position" class="positioning2" onclick="changePosition()">I'm going to change my position if I'm clicked </div>
+
+    <br>
+    <br>
+    <br>
+    
+<div id="changeColor" onclick="changeColor()"> I will change to a different color when you click on me thus changing the style object.</div>
+    <br>
+    <br>
+    <br>
+<div id="mouseEffect" onmouseover="hide()" onmouseout="show()"> I will disappear if put a mouse over me but i will come back if you remove it.</div>
+    <br>
+    <br>
+    
+    The difference between using the visibility property and the display property is that in visibilty, the object will remain in the same position and size but will be invisible. The display property will entirely remove/hide the element.
+
+    
+
+
+</body>
+</html> 

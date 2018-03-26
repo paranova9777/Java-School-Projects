@@ -1,0 +1,79 @@
+
+body {
+  font-family: Verdana;
+  color: #FFFFFF;
+  background-image:url(space.jpg);
+}
+
+div.column1 {
+    float: left;
+    width: 79%;
+}
+
+div.column2 {
+    float: left;
+    width: 20%;
+}
+
+a.link {
+    color:#FFFFFF;
+}
+
+
+
+/****************************************************************************
+Styles for the Structural Blocks
+****************************************************************************/
+
+#page_wrapper {
+  width:1000px;
+  margin:auto;
+}
+
+#header {
+  height:100px;
+  border: 1px #000 solid;
+  text-align: center;
+  border-color: #66ccff;
+}
+
+#content {
+  min-height:500px;
+  padding: 10px;
+  text-indent: 15px;
+  text-align: center;
+  border-color: #66ccff;
+}
+
+#footer {
+  height:100px;
+  text-align: center;
+}
+
+
+/****************************************************************************
+Styles for the Nav Bar
+****************************************************************************/
+
+ul.navbar {
+  list-style-type: none;
+}
+
+ul.navbar li {
+  float:left;
+  margin: 0px 0px 0px 0px;  /*T R B L*/
+}
+
+ul.navbar a {
+  display:block;
+  text-decoration:none;
+  background-color:#003380;
+  color: #FFFFFF;
+  padding: 16px;
+  text-align: center;
+}
+
+ul.navbar a:hover {
+  background-color:#b3d1ff;
+}
+
