@@ -1,1 +1,1 @@
-This respository serves as a dropbox of the various school projects that I have worked on over the years so others may gain an idea of my experience.It also includes a personal project for Unreal engine game code and SOME of the files for a website I created a from web programming class
+This respository serves as a dropbox of the various school projects that I have worked on over the years so others may gain an idea of my experience.It also includes a personal project for Unreal engine game code and SOME of the files for a website I created a from web programming class.
